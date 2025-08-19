@@ -72,7 +72,7 @@ const NavbarPage = () => {
           </NavbarContent>
           <NavbarBrand className="justify-end cursor-pointer">
             <Link
-              href="https://instagram.com"
+              href="https://github.com/andreass7/guava-disease"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -85,7 +85,10 @@ const NavbarPage = () => {
       </div>
       <div className="lg:hidden">
         <Navbar onMenuOpenChange={setIsMenuOpen} isBlurred>
-          <NavbarMenuToggle onPress={() => setIsMenuOpen(true)} />
+          <NavbarMenuToggle
+            className="cursor-pointer"
+            onPress={() => setIsMenuOpen(true)}
+          />
           <NavbarBrand>
             <div className="gap-4 items-center cursor-pointer flex">
               <Image
@@ -101,7 +104,17 @@ const NavbarPage = () => {
           </NavbarBrand>
           <NavbarMenu className="lg:hidden">
             {NAVBAR_LIST.map((item) => (
-              <NavbarMenuItem key={item.label}>{item.label}</NavbarMenuItem>
+              <NavbarMenuItem
+                key={item.label}
+                className={cn(
+                  "text-md font-medium p-2 hover:bg-danger-500 hover:text-white rounded-lg cursor-pointer",
+                  {
+                    "bg-danger-500 text-white": router.pathname === item.href,
+                  }
+                )}
+              >
+                <Link href={item.href}>{item.label}</Link>
+              </NavbarMenuItem>
             ))}
           </NavbarMenu>
         </Navbar>

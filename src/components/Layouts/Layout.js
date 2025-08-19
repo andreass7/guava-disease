@@ -19,11 +19,13 @@ const LayoutPage = (props) => {
   return (
     <Fragment>
       <PageHead title={title} />
-      <NavbarPage />
-      <div className={`${geistMono.className} lg:p-6 p-4 lg:mt-4`}>
-        {children}
-      </div>
-      <FooterPage />
+      <main className="flex flex-col min-h-screen">
+        <NavbarPage />
+        <div className={`${geistMono.className} lg:p-6 p-4 lg:mt-4 lg:mb-8 `}>
+          {children}
+        </div>
+        <FooterPage />
+      </main>
     </Fragment>
   );
 };

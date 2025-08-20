@@ -38,19 +38,22 @@ const NavbarPage = () => {
           maxWidth="full"
           isBlurred
           isBordered
-          className="rounded-full border"
+          className="rounded-full border dark:bg-gray-800"
         >
           <NavbarBrand>
-            <div className="gap-4 items-center cursor-pointer flex">
-              <Image
-                src="/guava.png"
-                alt="Guava Disease"
-                width={30}
-                height={30}
-              />
-              <p className="font-semibold text-md text-danger-500">
-                Guava <span className="italic text-emerald-400"> Disease</span>
-              </p>
+            <div>
+              <Link href="/" className="gap-4 items-center cursor-pointer flex">
+                <Image
+                  src="/guava.png"
+                  alt="Guava Disease"
+                  width={30}
+                  height={30}
+                />
+                <p className="font-semibold text-md text-danger-500">
+                  Guava{" "}
+                  <span className="italic text-emerald-400"> Disease</span>
+                </p>
+              </Link>
             </div>
           </NavbarBrand>
           <NavbarContent className="lg:flex space-x-2">
@@ -72,7 +75,7 @@ const NavbarPage = () => {
           </NavbarContent>
           <NavbarBrand className="justify-end cursor-pointer">
             <Link
-              href="https://github.com/andreass7/guava-disease"
+              href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
             >

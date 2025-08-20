@@ -14,7 +14,7 @@ import {
 const FooterPage = () => {
   return (
     <section className="w-full p-4">
-      <div className="text-center bg-danger-700 p-6 rounded-2xl">
+      <div className="text-center bg-danger-700 dark:bg-emerald-700 p-6 rounded-2xl">
         <div className="flex justify-center items-center gap-4">
           <Image
             src="/guava.png"

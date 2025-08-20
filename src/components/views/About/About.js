@@ -3,20 +3,25 @@ import Image from "next/image";
 
 const AboutPage = () => {
   return (
-    <section className="bg-white py-8 px-5">
+    <section className=" py-8 px-5">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-700">Tentang Aplikasi</h2>
-        <p className="mt-4 text-gray-600 leading-relaxed">
+        <h2 className="text-3xl font-bold text-gray-700 dark:text-gray-200">
+          Tentang Aplikasi
+        </h2>
+        <p className="mt-4 text-gray-600 leading-relaxed dark:text-gray-400">
           Aplikasi ini menggunakan model Machine Learning yang dilatih khusus
           untuk mengklasifikasikan penyakit pada daun jambu biji. Dengan
           teknologi ini, diharapkan petani dapat mengidentifikasi penyakit lebih
           cepat dan akurat, sehingga produktivitas tetap terjaga.
         </p>
       </div>
-      <Card isBlurred className="w-full mx-auto mt-8 py-2 px-8">
+      <Card
+        isBlurred
+        className="w-full dark:bg-gray-700 mx-auto mt-8 py-2 px-8"
+      >
         <CardBody>
           <div className="flex flex-col lg:flex-row lg:space-x-2 space-y-2 items-center">
-            <p>Teknologi yang digunakan :</p>
+            <p className="dark:text-gray-400">Teknologi yang digunakan :</p>
             <div className="flex items-center gap-4 ms-2">
               <div>
                 <Image
